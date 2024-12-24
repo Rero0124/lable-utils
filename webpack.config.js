@@ -19,6 +19,7 @@ module.exports = (argv) => {
     devServer: {
       port: 3000,
       hot: true,
+      allowedHosts: "all",
     },
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -45,6 +46,10 @@ module.exports = (argv) => {
     plugins: [
       new webpack.ProvidePlugin({
         React: "react",
+      }),
+      new webpack.DefinePlugin({
+        'process.env.LABLE_BACKEND_URL': JSON.stringify(process.env.LABLE_BACKEND_URL),
+        'process.env.LABLE_BACKEND_KEY': JSON.stringify(process.env.LABLE_BACKEND_KEY)
       }),
       new HtmlWebpackPlugin({
         template: '.' + basePath + '/public/index.html',
