@@ -19,6 +19,7 @@ module.exports = (argv) => {
     devServer: {
       port: 3000,
       hot: true,
+      historyApiFallback: true,
       allowedHosts: "all",
     },
     resolve: {

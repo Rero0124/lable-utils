@@ -1,0 +1,14 @@
+.container {
+  
+}
+
+.container > .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.container > .row > .col {
+  display: flex;
+  flex-direction: column;
+}

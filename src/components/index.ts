@@ -1,2 +1,2 @@
-export * from './common'
-export * from './Popup'
+export * from './common';
+export * from './Popup';
